@@ -1,23 +1,17 @@
-package com.product.productservice.model;
+package com.product.productservice.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-@Data
-@Entity
 @AllArgsConstructor
+@Data
 @NoArgsConstructor
-@Table(name="product")
-public class Product {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String productId;
+@Builder
+public class ProductRequest {
 
     private String productName;
     private String productDesc;
